@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        body{
+            perspective: 800px;
+        }
+        
+        .wrap{
+            height: 300px;
+            width: 100%;
+            margin: 0 auto;
+            transition-duration: 1s;
+            /* background-color: blue; */
+            transform-style: preserve-3d;
+            transition-property: transfrom;
+            position: relative;
+            display: flex;
+    justify-content: center;
+}
+
+
+
+        .wrap div{
+            height: 300px;
+            width: 250px;
+            transition-duration: 1s;
+            backface-visibility: hidden;
+            transition-timing-function: ease;
+
+/* Also the same as */
+transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        }
+
+        .wrap:hover .side-a{
+            transform: rotateY(180deg);
+        }
+        
+        .side-a{
+            /* background-color: rgb(110, 110, 218); */
+           
+            position: absolute;
+            z-index: 100;
+            background-image: url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .side-b{
+            background-color: rgb(132, 202, 132);
+            height: 300px;
+            width: 250px;
+            position: absolute;
+            transform: rotateY(180deg);
+            
+        }
+
+        .wrap:hover   .side-b{
+            transform: rotateY(360deg);
+        }
+
+        .grid-b {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    gap: 25px;
+}
+        
+
+    </style>
+</head>
+<body>
+
+
+    <div class="grid-b">
+
+        <div class="wrap">
+            <div class="side-a"></div>
+            <div class="side-b">My Photo</div>
+        </div>
+
+        <div class="wrap">
+            <div class="side-a"></div>
+            <div class="side-b">My Photo</div>
+        </div>
+
+        <div class="wrap">
+            <div class="side-a"></div>
+            <div class="side-b">My Photo</div>
+        </div>
+
+
+        <div class="wrap">
+            <div class="side-a"></div>
+            <div class="side-b">My Photo</div>
+        </div>
+
+
+        <div class="wrap">
+            <div class="side-a"></div>
+            <div class="side-b">My Photo</div>
+        </div>
+
+        <div class="wrap">
+            <div class="side-a"></div>
+            <div class="side-b">My Photo</div>
+        </div>
+
+        <div class="wrap">
+            <div class="side-a"></div>
+            <div class="side-b">My Photo</div>
+        </div>
+
+
+        <div class="wrap">
+            <div class="side-a"></div>
+            <div class="side-b">My Photo</div>
+        </div>
+    </div>
+   
+</body>
+</html>
